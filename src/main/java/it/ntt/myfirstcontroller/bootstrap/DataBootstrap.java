@@ -25,6 +25,10 @@ public class DataBootstrap implements CommandLineRunner{
         Author carlo = new Author();
         carlo.setName("Carlo");
         carlo.setSurname("Centofanti");
+
+        Author leonardo = new Author();
+        leonardo.setName("Leonardo");
+        leonardo.setSurname("D'Errico");
         
         Book book1 = new Book();
         book1.setTitle("Il mio primo libro");
@@ -33,6 +37,7 @@ public class DataBootstrap implements CommandLineRunner{
         book1.setAuthor(carlo);
 
         authorRepository.save(carlo);
+        authorRepository.save(leonardo);
         bookRepository.save(book1);
     }
     
