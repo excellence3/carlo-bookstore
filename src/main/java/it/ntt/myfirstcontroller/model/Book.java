@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Book {
     
@@ -21,6 +23,7 @@ public class Book {
     @ManyToOne
     @JoinColumn(name = "author_id")
     @NotNull
+    @JsonIgnore
     private Author author;
 
     public Long getId() {
